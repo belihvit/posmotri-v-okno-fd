@@ -10,7 +10,6 @@ html {
 
 .page {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: auto;
   color: #fff;
@@ -60,6 +59,7 @@ ol {
   gap: 29px;
   box-sizing: border-box;
   max-width: 100%;
+  min-height: 614px;
   padding: 0 30px;
 }
 
@@ -120,17 +120,15 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
+  height: 194px;
   height: 103px;
   object-fit: cover;
-  object-position: center;
+  object-position: right top;
 }
 
 .content__video-card-description-container {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  gap: 6px;
+  width: 196px;
   flex-basis: 0;
   overflow: hidden;
 }
@@ -144,7 +142,7 @@ ol {
 }
 
 .title {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
@@ -167,10 +165,11 @@ ol {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 1;
+  line-height: 100%;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-bottom: 6px;
 }
 
 .content__video-card-description {
@@ -180,7 +179,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 0.9;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -213,8 +212,8 @@ ol {
   height: 27px;
   border: none;
   border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
   border-right: 1px solid transparent;
+  border-bottom: 1px solid #fff;
   border-left: 1px solid transparent;
   color: #fff;
   font-family: inherit;
@@ -281,7 +280,7 @@ ol {
 }
 
 .button:hover {
-  background-color: #545050;
+  text-decoration: underline;
 }
 
 .button:focus {
@@ -291,6 +290,10 @@ ol {
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
+}
+
+.button:active {
+  background-color: #545050;
 }
 
 .content__list-item {
